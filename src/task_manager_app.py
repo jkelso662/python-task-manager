@@ -10,6 +10,10 @@ def init_db():
     conn.commit()
     conn.close()
 
+@app.route('/')
+def home():
+    return jsonify(message="Hello, Flask!")
+
 @app.route('/tasks', methods=['POST'])
 def create_task():
     task = request.json
