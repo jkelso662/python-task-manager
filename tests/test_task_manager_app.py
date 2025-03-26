@@ -26,7 +26,7 @@ def test_create_task(client):
 def test_get_tasks(client):
     task = {'name': 'Create repository', 'done': True}
     client.post('/tasks', json=task)
-    rv = client.get('/get-tasks')
+    rv = client.get('/tasks')
     json_data = rv.get_json()
     assert rv.status_code == 201
     assert len(json_data) > 0

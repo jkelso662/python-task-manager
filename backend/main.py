@@ -24,7 +24,7 @@ def create_task():
     conn.close()
     return jsonify(task), 201
 
-@app.route('/get-tasks', methods=['GET'])
+@app.route('/tasks', methods=['GET'])
 def get_tasks():
     conn = sqlite3.connect('tasks.db')
     c = conn.cursor()
