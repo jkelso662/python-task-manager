@@ -30,5 +30,5 @@ def test_get_tasks(client):
     json_data = rv.get_json()
     assert rv.status_code == 201
     assert len(json_data) > 0
-    assert json_data[0][0] == task['name']
-    assert json_data[0][1] == task['done']
+    assert json_data[0]['name'] == task['name']
+    assert json_data[0]['done'] == task['done']
