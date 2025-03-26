@@ -1,5 +1,5 @@
 import pytest
-from task_manager_app import app, init_db
+from main import app, init_db
 
 @pytest.fixture
 def client():
